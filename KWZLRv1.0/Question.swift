@@ -8,6 +8,6 @@
 import Foundation
 
 struct Question {
-    let questionText : String
-    let answer : String
+    let q : String
+    let a : String
 }
