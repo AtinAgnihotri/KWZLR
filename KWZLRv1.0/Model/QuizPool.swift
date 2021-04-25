@@ -27,25 +27,29 @@ struct QuizPool {
     
     var totalNoOfQues : Int = 0
     var questionNo : Int = 0
+    var score : Int = 0
     
     init() {
         totalNoOfQues = questionPool.count
     }
     
-    func checkAnswer (_ answerSelected : String) -> Bool {
+    mutating func checkAnswer (_ answerSelected : String) -> Bool {
         let preString = "The Answer to Question No. \(questionNo + 1)"
         if answerSelected == questionPool[questionNo].a {
-//            btnPressed!.backgroundColor = UIColor.green
             print(preString + " is correct")
+            score += 1
             return true
         }
         print(preString + " is incorrect")
         return false
-//        btnPressed!.setTitleColor(UIColor.black, for: .normal)
     }
     
     func getCurrentQuestionText () -> String {
         return questionPool[questionNo].q
+    }
+    
+    func getProgression () -> Float {
+        return Float(questionNo + 1)/Float(totalNoOfQues)
     }
     
     mutating func incrementQuestionNo () {
@@ -53,6 +57,11 @@ struct QuizPool {
             questionNo += 1
         } else {
             questionNo = 0
+            score = 0
         }
+    }
+    
+    func getScore() -> Int {
+        return score
     }
 }

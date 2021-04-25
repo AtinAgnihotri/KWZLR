@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet var progressBar: UIProgressView!
     @IBOutlet var trueButton: UIButton!
     @IBOutlet var falseButton: UIButton!
+    @IBOutlet var scoreText: UILabel!
     
     var btnPressed : UIButton? = nil
     var btnTextColor: UIColor = UIColor.white
@@ -26,7 +27,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         questionText.text = quiz.getCurrentQuestionText()
-        progressBar.progress = 1.0 / Float(quiz.totalNoOfQues)
+        progressBar.progress = quiz.getProgression()
+        scoreText.text = formatScoreText(0)
         
     }
 
@@ -42,6 +44,10 @@ class ViewController: UIViewController {
         
         // Setup the timer to update UI post feedback
         setTimerToUpdateUI()
+    }
+    
+    func formatScoreText(_ score : Int) -> String{
+        return "Score : \(score)"
     }
     
     func setTimerToUpdateUI() {
@@ -73,7 +79,11 @@ class ViewController: UIViewController {
         questionText.text = quiz.getCurrentQuestionText()
         
         // Update Progress Bar
-        progressBar.progress = Float(quiz.questionNo + 1) / Float (quiz.totalNoOfQues)
+        progressBar.progress = quiz.getProgression()
+        
+        // Update Score
+        let userScore = quiz.getScore()
+        scoreText.text = formatScoreText(userScore)
         
         // Revert Button back to original state
         btnPressed!.backgroundColor = btnBaseColor
