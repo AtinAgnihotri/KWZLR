@@ -17,9 +17,9 @@ class ViewController: UIViewController {
     
     // Quiz Array
     let quiz = [
-        ["Four + Two Equals Six?", "True"],
-        ["Five - Three is greater than One?", "True"],
-        ["Eight + Seven is double of Nine?", "False"]
+        Question(questionText: "Four + Two Equals Six?", answer: "True"),
+        Question(questionText: "Five - Three is greater than One?", answer: "True"),
+        Question(questionText: "Eight + Seven is double of Nine?", answer: "False")
     ]
     
     var totalNoOfQues : Int = 0
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        questionText.text = quiz[questionNo][0]
+        questionText.text = quiz[questionNo].questionText
         totalNoOfQues = quiz.count
         progressBar.progress = 0.0
         
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
 
     @IBAction func buttonPressed(_ sender: UIButton) {
         let answerSelected = sender.currentTitle!
-        let correctAnswer = quiz[questionNo][1]
+        let correctAnswer = quiz[questionNo].answer
         checkAnswer(answerSelected, correctAnswer)
         updateQuestionText()
     }
@@ -64,7 +64,7 @@ class ViewController: UIViewController {
     
     func updateQuestionText() {
         incrementQuestion()
-        questionText.text = quiz[questionNo][0]
+        questionText.text = quiz[questionNo].questionText
     }
     
 }
