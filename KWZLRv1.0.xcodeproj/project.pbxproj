@@ -17,6 +17,7 @@
 		498157DE263255FB00E1B5DE /* KWZLRv1_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498157DD263255FB00E1B5DE /* KWZLRv1_0Tests.swift */; };
 		498157E9263255FB00E1B5DE /* KWZLRv1_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498157E8263255FB00E1B5DE /* KWZLRv1_0UITests.swift */; };
 		4994D36526353D1300B14A83 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994D36426353D1300B14A83 /* Question.swift */; };
+		4994D36D2635504600B14A83 /* QuizPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994D36C2635504600B14A83 /* QuizPool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		498157E8263255FB00E1B5DE /* KWZLRv1_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWZLRv1_0UITests.swift; sourceTree = "<group>"; };
 		498157EA263255FB00E1B5DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4994D36426353D1300B14A83 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		4994D36C2635504600B14A83 /* QuizPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPool.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,15 +105,15 @@
 		498157C2263255FA00E1B5DE /* KWZLRv1.0 */ = {
 			isa = PBXGroup;
 			children = (
+				4994D36926354E2B00B14A83 /* Model */,
+				4994D36A26354E3600B14A83 /* View */,
+				4994D36B26354E3D00B14A83 /* Controller */,
 				498157C3263255FA00E1B5DE /* AppDelegate.swift */,
 				498157C5263255FA00E1B5DE /* SceneDelegate.swift */,
-				498157C7263255FA00E1B5DE /* ViewController.swift */,
-				498157C9263255FA00E1B5DE /* Main.storyboard */,
 				498157CF263255FB00E1B5DE /* Assets.xcassets */,
 				498157D1263255FB00E1B5DE /* LaunchScreen.storyboard */,
 				498157D4263255FB00E1B5DE /* Info.plist */,
 				498157CC263255FA00E1B5DE /* KWZLRv1_0.xcdatamodeld */,
-				4994D36426353D1300B14A83 /* Question.swift */,
 			);
 			path = KWZLRv1.0;
 			sourceTree = "<group>";
@@ -132,6 +134,31 @@
 				498157EA263255FB00E1B5DE /* Info.plist */,
 			);
 			path = KWZLRv1.0UITests;
+			sourceTree = "<group>";
+		};
+		4994D36926354E2B00B14A83 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4994D36426353D1300B14A83 /* Question.swift */,
+				4994D36C2635504600B14A83 /* QuizPool.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4994D36A26354E3600B14A83 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				498157C9263255FA00E1B5DE /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4994D36B26354E3D00B14A83 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				498157C7263255FA00E1B5DE /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +296,7 @@
 				498157C4263255FA00E1B5DE /* AppDelegate.swift in Sources */,
 				498157CE263255FA00E1B5DE /* KWZLRv1_0.xcdatamodeld in Sources */,
 				498157C6263255FA00E1B5DE /* SceneDelegate.swift in Sources */,
+				4994D36D2635504600B14A83 /* QuizPool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
