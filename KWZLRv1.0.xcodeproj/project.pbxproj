@@ -16,6 +16,7 @@
 		498157D3263255FB00E1B5DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 498157D1263255FB00E1B5DE /* LaunchScreen.storyboard */; };
 		498157DE263255FB00E1B5DE /* KWZLRv1_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498157DD263255FB00E1B5DE /* KWZLRv1_0Tests.swift */; };
 		498157E9263255FB00E1B5DE /* KWZLRv1_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498157E8263255FB00E1B5DE /* KWZLRv1_0UITests.swift */; };
+		4994D36526353D1300B14A83 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994D36426353D1300B14A83 /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		498157E4263255FB00E1B5DE /* KWZLRv1.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KWZLRv1.0UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		498157E8263255FB00E1B5DE /* KWZLRv1_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWZLRv1_0UITests.swift; sourceTree = "<group>"; };
 		498157EA263255FB00E1B5DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4994D36426353D1300B14A83 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				498157D1263255FB00E1B5DE /* LaunchScreen.storyboard */,
 				498157D4263255FB00E1B5DE /* Info.plist */,
 				498157CC263255FA00E1B5DE /* KWZLRv1_0.xcdatamodeld */,
+				4994D36426353D1300B14A83 /* Question.swift */,
 			);
 			path = KWZLRv1.0;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4994D36526353D1300B14A83 /* Question.swift in Sources */,
 				498157C8263255FA00E1B5DE /* ViewController.swift in Sources */,
 				498157C4263255FA00E1B5DE /* AppDelegate.swift in Sources */,
 				498157CE263255FA00E1B5DE /* KWZLRv1_0.xcdatamodeld in Sources */,

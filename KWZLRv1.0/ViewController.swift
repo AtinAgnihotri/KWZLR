@@ -8,24 +8,29 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    // UI IB Outlets
     @IBOutlet var questionText: UILabel!
     @IBOutlet var progressBar: UIProgressView!
     @IBOutlet var trueButton: UIButton!
     @IBOutlet var falseButton: UIButton!
     
+    // Quiz Array
     let quiz = [
         ["Four + Two Equals Six?", "True"],
         ["Five - Three is greater than One?", "True"],
         ["Eight + Seven is double of Nine?", "False"]
     ]
     
-    var questionNo = 0
+    var totalNoOfQues : Int = 0
+    var questionNo : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         questionText.text = quiz[questionNo][0]
+        totalNoOfQues = quiz.count
+        progressBar.progress = 0.0
         
     }
 
@@ -33,7 +38,7 @@ class ViewController: UIViewController {
         let answerSelected = sender.currentTitle!
         let correctAnswer = quiz[questionNo][1]
         checkAnswer(answerSelected, correctAnswer)
-        incrementQuestion()
+        updateQuestionText()
     }
     
     func checkAnswer (_ answerSelected : String, _ correctAnswer : String) {
@@ -45,10 +50,20 @@ class ViewController: UIViewController {
         }
     }
     
+    
     func incrementQuestion() {
-        if questionNo < 2 {
+        if questionNo < (totalNoOfQues - 1) {
             questionNo += 1
+            progressBar.progress = Float(questionNo) / Float(totalNoOfQues)
+            
+        } else  {
+            questionNo = 0
+            progressBar.progress = 0
         }
+    }
+    
+    func updateQuestionText() {
+        incrementQuestion()
         questionText.text = quiz[questionNo][0]
     }
     
